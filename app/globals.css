@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --teal: #14A7A0;
+    --pink: #F76B8A;
+    --amber: #F7C35A;
+    --bg-base: #080810;
+    --bg-card: #0D0D12;
+    --bg-elevated: #111118;
+    --bg-surface: #1A1A24;
+  }
+
+  body {
+    background-color: #080810;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glow-teal {
+    box-shadow: 0 0 20px rgba(20, 167, 160, 0.3);
+  }
+
+  .glow-pink {
+    box-shadow: 0 0 20px rgba(247, 107, 138, 0.3);
+  }
+
+  .gradient-teal-pink {
+    background: linear-gradient(135deg, #14A7A0, #F76B8A);
+  }
+
+  .blur-dark {
+    background: rgba(13, 13, 13, 0.8);
+    backdrop-filter: blur(10px);
+  }
+
+  .card-dark {
+    background: #111827;
+  }
+
+  /* Responsive text utilities */
+  .text-xs {
+    @apply text-[12px];
+  }
+
+  .text-sm {
+    @apply text-[14px];
+  }
+
+  .text-base {
+    @apply text-[16px];
+  }
+
+  /* Letter spacing */
+  .letter-spacing {
+    letter-spacing: 0.1em;
+  }
+
+  .tracking-widest {
+    letter-spacing: 0.14em;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(20, 167, 160, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(20, 167, 160, 0.5);
+}
+
+
